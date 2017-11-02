@@ -8,7 +8,6 @@ public class scoreManager : MonoBehaviour {
 
 	public Text text;
 
-
 	// Use this for initialization
 	void Start () {
 		text= GetComponent<Text>();
