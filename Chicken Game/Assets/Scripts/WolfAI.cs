@@ -24,7 +24,7 @@ void OnTriggerStay(Collider other)
 	void OnCollisionEnter(Collision other)
 	{
 		if(other.gameObject.name == "farmerBrown"){
-			playerHealth.TakeDamage(damage);
+			// playerHealth.TakeDamage(damage);
 		}
 		
 		print("wolf is attacking");
