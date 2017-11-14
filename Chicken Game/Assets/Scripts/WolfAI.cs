@@ -10,6 +10,8 @@ public Transform target;
 
 public int damage;
 
+public GameObject pclHealth;
+
 
 
 void OnTriggerStay(Collider other)
@@ -23,17 +25,17 @@ void OnTriggerStay(Collider other)
 }
 	void OnCollisionEnter(Collision other)
 	{
-		if(other.gameObject.name == "farmerBrown"){
-			// playerHealth.TakeDamage(damage);
-		}
-		
-		print("wolf is attacking");
+	
+		if(other.gameObject.name == "FarmerBrown"){
 		var hit = other.gameObject;
 		var health = hit.GetComponent<playerHealth>();
-
-		if(health != null){
-			health.TakeDamage(damage);
+		
+		if(pclHealth != null){
+			print("wolf is attacking");
+			// pclHealth.TakeDamage(damage);
+			other.gameObject.GetComponent<playerHealth>().TakeDamage(damage);
 		}	
     }
+	}
 }
 

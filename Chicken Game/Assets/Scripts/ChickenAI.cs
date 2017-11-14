@@ -5,11 +5,8 @@ using UnityEngine;
 public class ChickenAI : MonoBehaviour {
 	
 	public float moveSpeed;
-
 	public Transform FarmerBrown;
-
 	public Transform chickenPen;
-
 	public Transform Wolfy;
 	public int points = 10; 
 

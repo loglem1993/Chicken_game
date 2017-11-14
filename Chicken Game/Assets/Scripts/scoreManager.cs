@@ -1,35 +1,43 @@
-﻿using UnityEngine;
-using System.Collections.Generic;
+﻿
+using UnityEngine;
+
+using System.Collections;
+
 using UnityEngine.UI;
 
 public class scoreManager : MonoBehaviour {
+public static int score;
 
-	public static int score;
+public Text text;
+void Start () {
 
-	public Text text;
+		text = GetComponent<Text>();
 
-	// Use this for initialization
-	void Start () {
-		text= GetComponent<Text>();
-		score = 0;
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		if(score < 0)
 			score = 0;
-			text.text = " " + score;
+
 	}
-			public static void Addpoints(int pointsToAdd){
-				score += pointsToAdd;
+	void Update () {
 
-			}
-			public void Reset(){
-				score=0;
-			}
+		if(score < 0)
 
+			score = 0;
+
+			
+
+		text.text =" " + score;
 
 }
+	public static void Addpoints(int pointsToAdd){
 
+		score += pointsToAdd;
+
+	}
+	public void Reset(){
+
+		score=0;
+
+	}
+
+}
 	
 
