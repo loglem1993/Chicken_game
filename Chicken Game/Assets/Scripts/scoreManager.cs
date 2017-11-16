@@ -31,8 +31,8 @@ void Start () {
 
 		score += pointsToAdd;
 
-	}
-	public void Reset(){
+}
+public void Reset(){
 
 		score=0;
 
