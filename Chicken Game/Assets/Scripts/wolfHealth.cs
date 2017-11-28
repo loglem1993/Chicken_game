@@ -7,7 +7,9 @@ public class wolfHealth : MonoBehaviour {
 	public int maxHealth = 3;
 	public Transform spawnPoint;
 	public int points;
-
+	void start(){
+		currentHealth = maxHealth;
+	}
 	
 	public void TakeDamage(int amount){
 		currentHealth -= amount;

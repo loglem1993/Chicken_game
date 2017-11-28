@@ -1,16 +1,13 @@
-﻿using UnityEngine;
+﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.AI;
+using UnityEngine;
 
 public class WolfAI : MonoBehaviour {
 
 public float movespeed;
-
 public Transform target;
-
 public int damage;
 
-public GameObject pclHealth;
 
 
 
@@ -25,17 +22,13 @@ void OnTriggerStay(Collider other)
 }
 	void OnCollisionEnter(Collision other)
 	{
-	
-		if(other.gameObject.name == "FarmerBrown"){
-		var hit = other.gameObject;
-		var health = hit.GetComponent<playerHealth>();
-		
-		if(pclHealth != null){
 			print("wolf is attacking");
-			// pclHealth.TakeDamage(damage);
-			other.gameObject.GetComponent<playerHealth>().TakeDamage(damage);
+			var hit = other.gameObject;
+		    var health = hit.GetComponent<playerHealth>();
+			if(health !=null)
+				health.TakeDamage(damage);
 		}	
     }
-	}
-}
+	
+
 

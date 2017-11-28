@@ -9,7 +9,6 @@ public class playerHealth : MonoBehaviour {
 	public int currentHealth = maxHealth;
 
 	public Text hp;
-
 	public Text maxHP;
 	
 	// Update is called once per frame
