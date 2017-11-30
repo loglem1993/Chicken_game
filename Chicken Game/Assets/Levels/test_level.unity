@@ -617,6 +617,7 @@ RectTransform:
   m_Children:
   - {fileID: 950757107}
   - {fileID: 1372406479}
+  - {fileID: 1114767225}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1280,6 +1281,80 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 993082707}
+--- !u!1 &1114767222
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1114767225}
+  - component: {fileID: 1114767224}
+  - component: {fileID: 1114767223}
+  m_Layer: 5
+  m_Name: WinText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1114767223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1114767222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 70
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 70
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: '****Winner You Rock!!!!****'
+--- !u!222 &1114767224
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1114767222}
+--- !u!224 &1114767225
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1114767222}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 360162946}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0.000005722}
+  m_SizeDelta: {x: 897.8, y: 433.5}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1372406478
 GameObject:
   m_ObjectHideFlags: 0
@@ -1415,6 +1490,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1551130958}
   - component: {fileID: 1551130959}
+  - component: {fileID: 1551130960}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1449,6 +1525,20 @@ MonoBehaviour:
   currentHealth: 10
   hp: {fileID: 1663316063}
   maxHP: {fileID: 1493565735}
+--- !u!114 &1551130960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1551130957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 136065484ac72184f8ebd35014ef5e3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  winScore: 20
+  scoreManager: {fileID: 1638971585}
+  winText: {fileID: 1114767223}
 --- !u!1 &1577428703
 GameObject:
   m_ObjectHideFlags: 0
@@ -1579,6 +1669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91fe0f0393e8444478d402c23a645477, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreAmount: 0
   text: {fileID: 1638971588}
 --- !u!114 &1638971588
 MonoBehaviour:
@@ -2179,6 +2270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91fe0f0393e8444478d402c23a645477, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreAmount: 0
   text: {fileID: 248859917}
 --- !u!1 &1947253040
 GameObject:
