@@ -15,7 +15,6 @@ void OnTriggerStay(Collider other)
 {
 
 	if(other.gameObject.name == "FarmerBrown"){
-	Debug.Log("FarmerBrown has entered Wolfy trigger");
 	transform.LookAt(target);
 	transform.Translate(Vector3.forward*movespeed*Time.deltaTime);
 	}
